@@ -1,0 +1,318 @@
+.primary_element_main {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: .8;
+    border-radius: 0px 10px 10px 10px;
+    height: 100%;
+    z-index: 3;
+    box-shadow: 0 0 10em 0 rgba(black, .5), 0 0 2em 0 rgba(black, .15);
+    width: 100%;
+    transition: background-image 5s ease; 
+}
+
+
+.top_row {
+    padding: 1%;
+    height: 80%;
+    font-size: small;
+    overflow-y: auto;
+    overflow-x: hidden;
+    word-wrap: break-word;
+}
+
+.top_row .message {
+    padding: 1%;
+    display: flex;
+    flex-direction: horizontal;
+    position: relative;
+    float: left;
+    overflow-x: auto;
+    min-width: 51%;
+    max-width: 100%;
+}
+
+.top_row .message .contents {
+    background-color: #9fc4f2dd;
+    flex: 1;
+    align-self: center;
+    padding: 2%;
+    max-width: 90%;
+    max-height: 55vh;
+    overflow-y: visible;
+    overflow-x: auto;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.top_row .mine {
+    flex-direction: row-reverse;
+    float: right;
+}
+
+.date_mine {
+    color: #183c50;
+    font-size: 10px;
+}
+
+.date_mine:hover {
+    font-weight: bold;
+}
+
+.top_row .mine .contents {
+    background-color: #E5E7FFDD;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 0vh;
+}
+
+
+.bottom_row {
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1%;
+    gap: 1%;
+}
+
+.buttons_textarea_button {
+    display: flex;
+    align-items: center;
+    width: 85%;
+}
+
+.buttons_audio_video {
+    display: flex;
+    align-items: center;
+    width: 15%;
+}
+
+.button_attachment,
+.button_magic_tools,
+.button_emoji,
+.textarea_unichat,
+.button_send {
+    height: 95%;
+    width: 10%;
+    border: none;
+    padding: 10px;
+    color: #183c50;
+    background-color: #ccdef4bb;
+    font-size: 16px;
+    backdrop-filter: blur(1px);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button_attachment {
+    border-radius: 20px 0px 0px 20px;
+}
+
+.button_emoji:hover{ 
+    font-weight: bold;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #183c50aa;
+    font-size: larger;
+}
+
+.button_emoji:active{ 
+    font-weight: bold;
+    background-color: #183c50aa;
+    color: orange;
+    border-width: 1px;
+    border-style: solid;
+    border-color: orange;
+}
+
+.button_magic_tools:hover{ 
+    font-weight: bold;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #183c50aa;
+    font-size: larger;
+}
+
+.button_magic_tools:active{ 
+    font-weight: bold;
+    background-color: #183c50aa;
+    color: yellow;
+    border-width: 1px;
+    border-style: solid;
+    border-color: yellow;
+}
+
+.button_attachment:hover{ 
+    font-weight: bold;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #183c50aa;
+    font-size: larger;
+}
+
+.button_attachment:active{ 
+    font-weight: bold;
+    background-color: #183c50aa;
+    color: #ccdef4bb;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ccdef4bb;
+}
+
+.textarea_unichat {
+    resize: none;
+    width: 100%;
+    background-color: #183c50dd;
+    color: #E5E7FF;
+    font-weight: bold;
+    font-size: 14px;
+    border: none;
+    padding: 10px;
+}
+.textarea_unichat::placeholder {
+    font-weight: bold;
+    color: #6f99af; 
+  }
+
+.ql_textarea_unichat{
+    resize: none;
+    width: 100%;
+    max-height: 95%;
+    background-color: #E5E7FFee;
+    color: #183c50;
+    font-size: 14px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    word-wrap: break-word;
+}
+
+
+.button_send {
+    border-radius: 0px 20px 20px 0px;
+}
+
+.button_send:hover{ 
+    font-weight: bold;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #183c50aa;
+    font-size: larger;
+}
+
+.button_send:active{ 
+    font-weight: bold;
+    background-color: #183c50aa;
+    color: #ccdef4bb;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ccdef4bb;
+}
+.buttons_audio_video {
+    display: flex;
+}
+
+.button_audio,
+.button_video {
+    height: 95%;
+    width: 10%;
+    border: none;
+    padding: 10px;
+    color: #183c50;
+    font-size: 16px;
+    backdrop-filter: blur(1px);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button_audio {
+    width: 50%;
+    border-radius: 20px 0px 0px 20px;
+    background-color: #ccdef4bb;
+}
+
+.button_audio:hover{ 
+    font-weight: bold;
+    border-width: 1px;
+    border-style: solid;
+    border-color: red;
+    color: red;
+    font-size: larger;
+}
+
+.button_audio:active{ 
+    font-weight: bold;
+    background-color: #183c50aa;
+    border-width: 1px;
+    border-style: solid;
+    border-color: greenyellow;
+    color: greenyellow;
+}
+
+.button_video {
+    width: 50%;
+    border-radius: 0px 20px 20px 0px;
+    background-color: #ccdef4bb;
+}
+
+.button_video:hover{ 
+    font-weight: bold;
+    border-width: 1px;
+    border-style: solid;
+    border-color: red;
+    color: red;
+    font-size: larger;
+}
+
+.button_video:active{ 
+    font-weight: bold;
+    background-color: #183c50aa;
+    border-width: 1px;
+    border-style: solid;
+    border-color: greenyellow;
+    color: greenyellow;
+}
+
+
+.bubble {
+    display: none;
+    position: absolute;
+    bottom: 18%;
+    left: 2%;
+    background-color: #f0ecfc;
+    background-image: linear-gradient(#d9ddff, #e0e3ff, #ebedff, #f4f5ff, #ffffff);
+    padding: 1%;
+    max-width: 50%;
+    max-height: 40%;
+    overflow-y: visible;
+    overflow-x: auto;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    border-bottom-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.ql-toolbar {
+    display: none;
+    position: absolute;
+    bottom: 18%;
+    left: 2%;
+    background-color: #f0ecfc;
+    background-image: linear-gradient(#d9ddff, #e0e3ff, #ebedff, #f4f5ff, #ffffff);
+    padding: 1%;
+    max-width: 37%;
+    max-height: 40%;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    border-bottom-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+
+  #ql_text-message{
+    display: none;
+  }

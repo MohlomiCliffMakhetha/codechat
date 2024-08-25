@@ -1,0 +1,221 @@
+
+<link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+<link rel="mask-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">
+<link rel="canonical" href="https://codepen.io/Mohlomi-Cliff-Makhetha/pen/KKbbGOp">
+<div id="toolBar" class="toolbar">
+  <div id="radiusTool" class="radius__tool">
+    <span>RADIUS</span>
+    <input type="range" name="radiusPoint" id="radiusPoint" class="radius__point" min="1" max="20" step="1" value="10">
+    <span id="radTextRaduis">10</span>
+  </div>
+  <div id="radiusTool" class="radius__tool">
+    <span>BLUR</span>
+    <input type="range" name="radiusBlur" id="radiusBlur" class="radius__point" min="0" max="20" step="1" value="0">
+    <span id="radTextBlur">0</span>
+  </div>
+  <div id="selectColors" class="select__colors">
+    <input type="radio" name="radioColors" id="red" value="#FF0000">
+    <label for="red" class="radio__colors"></label>
+    <input type="radio" name="radioColors" id="blue" value="#2E8B57">
+    <label for="blue" class="radio__colors"></label>
+    <input type="radio" name="radioColors" id="green" value="#1E90FF">
+    <label for="green" class="radio__colors"></label>
+    <input type="radio" name="radioColors" id="yellow" value="#FFFF00">
+    <label for="yellow" class="radio__colors"></label>
+    <input type="radio" name="radioColors" id="pink" value="#FF69B4">
+    <label for="pink" class="radio__colors"></label>
+    <input type="radio" name="radioColors" id="gray" value="#A9A9A9">
+    <label for="gray" class="radio__colors"></label>
+    <input type="radio" name="radioColors" id="black" checked value="#111111">
+    <label for="black" class="radio__colors"></label>
+  </div>
+  <div class="buttons__canvas">
+    <button type="button" id="saveCanvas" class="btn__save">SAVE</button>
+    <button type="button" id="clearCanvas" class="btn__clear">CLEAR</button>
+  </div>
+</div>
+<canvas id="canvas">
+  Sorry, your browser is rubbish.
+</canvas>
+
+<style>
+
+canvas {
+    display: block;
+  background: #f9f9f9;
+    cursor: default;
+    width: 100%;
+    height: 100%;
+}
+.toolbar {
+    top: 0;
+    display: flex;
+    width:inherit;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+
+    color: #eee;
+    background: #222;
+    box-shadow: 0 0 2px 2px rgba(47, 47, 47, .5);
+
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  
+    transition: top .5s;
+}
+@media screen and (min-width: 320px) {
+    .toolbar {
+        justify-content: space-around;
+    }
+}
+@media screen and (min-width: 768px) {
+    .toolbar {
+        padding-bottom: 0;
+
+        justify-content: space-between;
+    }
+}
+.radius__tool {
+    line-height: 50px;
+
+    display: flex;
+
+    align-items: center;
+}
+.radius__point {
+    width: 150px;
+}
+.radius__point:focus {
+    outline: none;
+}
+.radius__point::-webkit-slider-thumb {
+    width: 20px;
+    height: 20px;
+    margin-top: -9px;
+
+    border: 3px solid #222;
+    border-radius: 50%;
+    background-color: #eee;
+}
+.radius__point::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+
+    border: 3px solid #222;
+    border-radius: 50%;
+    background-color: #eee;
+}
+.radius__point::-ms-thumb {
+    width: 20px;
+    height: 20px;
+
+    border: 3px solid #222;
+    border-radius: 50%;
+    background-color: #eee;
+}
+.radius__point::-webkit-slider-runnable-track {
+    height: 3px;
+
+    background-color: #eee;
+}
+.radius__point:focus::-webkit-slider-runnable-track {
+    outline: none;
+}
+.radius__point::-moz-range-track {
+    height: 3px;
+
+    background-color: #777;
+}
+.radius__point::-ms-track {
+    height: 3px;
+
+    background-color: #777;
+}
+.radius__point::-ms-fill-lower {
+    background-color: HotPink;
+}
+.radius__point::-ms-fill-upper {
+    background-color: black;
+}
+.radius__point,
+.radius__point::-webkit-slider-runnable-track,
+.radius__point::-webkit-slider-thumb {
+    -webkit-appearance: none;
+}
+input[type=radio] {
+    display: none;
+}
+input[type=radio]:checked + .radio__colors:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    display: inline-block;
+
+    width: 8px;
+    height: 8px;
+
+    content: '';
+    transform: translate(-50%, -50%);
+
+    border: 1px solid #eee;
+    border-radius: 50%;
+    background-color: #222;
+}
+.radio__colors {
+    position: relative;
+
+    display: inline-block;
+
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+
+    border-radius: 50%;
+    background-color: #111;
+    box-shadow: 0 1px 0 rgba(255,255,255,.5) inset, 0 2px 2px rgba(0,0,0,.5) inset;
+}
+.radio__colors:nth-child(2) {
+    background: #f00;
+}
+.radio__colors:nth-child(4) {
+    background: #2e8b57;
+}
+.radio__colors:nth-child(6) {
+    background: #1e90ff;
+}
+.radio__colors:nth-child(8) {
+    background: #ff0;
+}
+.radio__colors:nth-child(10) {
+    background: #ff69b4;
+}
+.radio__colors:nth-child(12) {
+    background: #a9a9a9;
+}
+.radio__colors:nth-child(14) {
+    background: #111;
+}
+@media screen and (max-width: 480px) {
+    .buttons__canvas {
+        margin-top: 5px;
+    }
+}
+.btn__save {
+    border-color: #74c772;
+    background: #74c772;
+}
+.btn__clear {
+    border-color: #ff5b00;
+    background: #ff5b00;
+}
+.btn__clear,
+.btn__save {
+    font-family: 'Ubuntu', sans-serif;
+
+    color: #eee;
+    outline: none;
+}
+</style>

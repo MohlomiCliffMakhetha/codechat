@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="createcc.css">
+    <script defer src="createcc.js"></script>
+    <title>CΘDΣ CHΔT JΘIN/CRΣΔΤΣ</title>
+</head>
+
+<body>
+
+    <div id='join' class="container">
+        <div class="form-box login">
+            <img class="ccicon" src="codechaticon.png">
+            <img class="ccname" src="codechatname.png">
+            <form action="joincodechat.php" method="post" onsubmit="return validateForm('joinEmail')">
+                <div class="input-box">
+                    <span class="icon"><i class="fa fa-link"></i></span>
+                    <input type="text" id="linkCode" name="linkCode" required>
+                    <label id="e_label">Invitation link: </label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                    <input type="email" id="joinEmail" name="joinEmail" required>
+                    <label id="e_label">Email: </label>
+                </div>
+                <button type="submit" class="btn" id="joinSubmit">JΘIN A GRΘUP CHΔT</button>
+            </form>
+            <div class="login-register">
+                <p>Don't have an invitation link? </p>
+                <br><button onclick="createSwitch()" class='switch'>CRΣΔΤΣ Α GRΘΥΡ CHΔΤ</button>
+            </div>
+        </div>
+    </div>
+    <div id='create' class="container" style="display: none;">
+        <div class="form-box login">
+            <img class="ccicon" src="codechaticon.png">
+            <img class="ccname" src="codechatname.png">
+            <form action="createcodechat.php" method="post" onsubmit="return validateForm('createEmail')">
+                <div class="input-box">
+                    <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                    <input type="email" id="createEmail" name="createEmail" required>
+                    <label id="e_label">Email: </label>
+                </div>
+                <button type="submit" class="btn" id="createSubmit">CRΣΔΤΣ Α GRΘΥΡ CHΔΤ</button>
+            </form>
+            <div class="login-register">
+                <p>Have an invitation link? </p>
+                <br><button onclick="joinSwitch()" class='switch'>JΘIN Α GRΘΥΡ CHΔΤ</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function joinSwitch() {
+            console.log()
+            document.getElementById('create').style.display = 'none';
+            document.getElementById('join').style.display = 'block';
+            // Disable the create form submit button
+            document.getElementById('createSubmit').disabled = true;
+        }
+
+        function createSwitch() {
+            document.getElementById('join').style.display = 'none';
+            document.getElementById('create').style.display = 'block';
+            // Disable the join form submit button
+            document.getElementById('joinSubmit').disabled = true;
+        }
+    </script>
+</body>
+
+</html>

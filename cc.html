@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+    integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/19.1.3/css/dx.common.css">
+  <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/19.1.3/css/dx.light.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/quill/1.3.7/quill.snow.css">
+  <script>
+    window.ZeroMdConfig = {
+      prismUrl: [
+        ['https://cdn.jsdelivr.net/gh/PrismJS/prism@1/prism.min.js', 'data-manual'],
+        'https://cdn.jsdelivr.net/gh/PrismJS/prism@1/plugins/autoloader/prism-autoloader.min.js',
+        'https://cdn.jsdelivr.net/gh/PrismJS/prism@1/plugins/toolbar/prism-toolbar.min.js',
+        'https://cdn.jsdelivr.net/gh/PrismJS/prism@1/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js'
+      ],
+      cssUrls: [
+        'https://cdn.jsdelivr.net/gh/sindresorhus/github-markdown-css@4/github-markdown.min.css',
+        'https://cdn.jsdelivr.net/gh/PrismJS/prism@1/themes/prism.min.css',
+        'https://cdn.jsdelivr.net/gh/PrismJS/prism@1/plugins/toolbar/prism-toolbar.min.css'
+      ]
+    }
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/emoji-picker-element@^1/index.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vextab@3.0.6/dist/main.prod.min.js"></script>
+  <script type="module">
+    import { Vex } from "https://cdn.skypack.dev/vexflow@beta/build/esm/entry/vexflow.js";
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"
+    integrity="sha512-LQNxIMR5rXv7o+b1l8+N1EZMfhG7iFZ9HhnbJkTp4zjNr5Wvst75AqUeFDxeRUa7l5vEDyUiAip//r+EFLLCyA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/quill/1.3.7/quill.min.js"
+    integrity="sha512-P2W2rr8ikUPfa31PLBo5bcBQrsa+TNj8jiKadtaIrHQGMo6hQM6RdPjQYxlNguwHz8AwSQ28VkBK6kHBLgd/8g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdpn.io/cpe/boomboom/pen.js?key=pen.js-78ad9009-851a-b176-012f-dea8af5552a1" crossorigin="">
+  </script>
+
+
+  <script>
+    let script = document.createElement('script');
+    script.src = "https://cdn.jsdelivr.net/npm/mathpix-markdown-it@1.0.40/es5/bundle.js";
+    document.head.append(script);
+
+    script.onload = function () {
+      const isLoaded = window.loadMathJax();
+      if (isLoaded) {
+        console.log('Styles loaded!')
+      }
+    }
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://cdn3.devexpress.com/jslib/19.1.3/js/dx.all.js"></script>
+  <script src="https://cdpn.io/cpe/boomboom/pen.js?key=pen.js-06d34f6a-a681-b845-c6ba-457fefee4940" crossorigin="">
+  </script>
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [
+          ['$', '$'],
+          ['\\(', '\\)']
+        ]
+      }
+    }
+    addEventListener('zero-md-rendered', () => MathJax.typeset())
+  </script>
+  <link rel="stylesheet" href="cc.css">
+  <link rel="stylesheet" href="unichat.css">
+  <script defer src="cc.js"></script>
+  <script defer src="unichat.js"></script>
+
+  <script defer src="loading.js"></script>
+  <script defer src="error404.js"></script>
+  <script defer src="calculator.js"></script>
+  <script defer src="stickynotes.js"></script>
+  <script defer src="filemanager.js"></script>
+  <script defer src="kanbanboard.js"></script>
+
+  <title>CΘDΣ CHΔT</title>
+</head>
+
+<body>
+  <div class="app">
+    <div class="header">
+      <img class="ccicon" src="codechaticon.png">
+      <img class="ccname" src="codechatname.png">
+      <div class="search-bar">
+        <input class="search-input" type="input" placeholder="Search">
+      </div>
+      <div class="header-profile">
+        <span id="username">Heather Louw</span>
+        <img class="profile-img"
+          src="https://images.unsplash.com/photo-1600353068440-6361ef3a86e8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+          alt="">
+      </div>
+    </div>
+    <div class="main-container">
+      <div class="primary" style="width:70%;">
+        <select id="primary_selector">
+          <option class="dropdown-choice dropdown-placeholder" disabled="" style="display: none;">
+          </option>
+          <option class="dropdown-choice" value="1-ccp">1️⃣ Uni Chat</option>
+          <option class="dropdown-choice" value="2-ccp">2️⃣ My Kanban Board</option>
+          <option class="dropdown-choice" value="3-ccp">3️⃣ My Sticky Notes</option>
+          <option class="dropdown-choice" value="4-ccp">4️⃣ My To-do List</option>
+          <option class="dropdown-choice" value="5-ccp">5️⃣ My White Board</option>
+        </select>
+        <div id="primary_display" class="primary_container">
+          <loading-cc id="0-ccp" class="p-elements"></loading-cc>
+          <error404-cc id="p-err" class="p-elements"></error404-cc>
+          <kanbanboard-cc id="2-ccp" class="p-elements"></kanbanboard-cc>
+          <stickynotes-cc id="3-ccp" class="p-elements"></stickynotes-cc>
+          <calculator-cc id="5-ccp" class="p-elements"></calculator-cc>
+          <div class="p-elements" id="1-ccp">
+            <div class="primary_element_main">
+              <div class="top_row" id="unichat">
+              </div>
+              <zero-md class="bubble" id="md-edit" no-shadow manual-render></zero-md>
+              <emoji-picker class="bubble"></emoji-picker>
+              <form id="chat__form" class="bottom_row">
+                <div class="buttons_textarea_button">
+                  <button type="button" class="button_attachment" id="btn_atach"><i class="fa fa-paperclip"></i></button>
+                  <button type="button" class="button_magic_tools" id="btn_magic"><i class="fa fa-magic"></i></button>
+                  <button type="button" class="button_emoji" id="btn_emoji"><i class="fa fa-smile-o"></i></button>
+                  <textarea id="text-message" class="textarea_unichat" data-gramm_editor="false" maxlength="" placeholder=" >_ "></textarea>
+                  <div class="ql_textarea_unichat" id="ql_text-message" data-gramm_editor="false" onclick="magic()">
+                  </div>
+                  <button type="submit" id="send" class="button_send"><i class="fa fa-send-o"></i></button>
+                </div>
+                <div class="buttons_audio_video">
+                  <button type="button" class="button_audio" id="btn_audio"><i class="fa fa-microphone"></i></button>
+                  <button type="button" class="button_video" id="btn_video"><i class="fa fa-video-camera"></i></button>
+                </div>
+            </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="secondary" style="width: 30%;">
+        <select id="secondary_selector">
+          <option class="dropdown-choice dropdown-placeholder" disabled="" style="display: none;">
+          </option>
+          <option class="dropdown-choice" value="1-ccs">🔔 Notifications</option>
+          <option class="dropdown-choice" value="2-ccs">☎️ Contacts</option>
+          <option class="dropdown-choice" value="3-ccs">📂 Files</option>
+          <option class="dropdown-choice" value="4-ccs">📆 Calendar</option>
+          <option class="dropdown-choice" value="5-ccs">🧮 Calculator</option>
+          <option class="dropdown-choice" value="6-ccs">🌐 Collaboration</option>
+          <option class="dropdown-choice" value="7-ccs">📌 Bulletin Board</option>
+          <option class="dropdown-choice" value="8-ccs">💬 Q&A</option>
+          <option class="dropdown-choice" value="9-ccs">👤 Profile</option>
+          <option class="dropdown-choice" value="10-ccs">⚙️ Settings</option>
+        </select>
+        <div id="secondary_display" class="secondary_container">
+          <!--secondary elements start here-->
+          <loading-cc id="0-ccs" class="s-elements"></loading-cc>
+          <div id="3-ccs" class="s-elements"></div>
+          <error404-cc id="s-err" class="s-elements"></error404-cc>
+          <calculator-cc id="5-ccs" class="s-elements"></calculator-cc>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

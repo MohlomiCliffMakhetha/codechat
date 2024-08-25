@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="ccold.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+    integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script>
+    window.ZeroMdConfig = {
+      prismUrl: [
+        ['https://cdn.jsdelivr.net/gh/PrismJS/prism@1/prism.min.js', 'data-manual'],
+        'https://cdn.jsdelivr.net/gh/PrismJS/prism@1/plugins/autoloader/prism-autoloader.min.js',
+        'https://cdn.jsdelivr.net/gh/PrismJS/prism@1/plugins/toolbar/prism-toolbar.min.js',
+        'https://cdn.jsdelivr.net/gh/PrismJS/prism@1/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js'
+      ],
+      cssUrls: [
+        'https://cdn.jsdelivr.net/gh/sindresorhus/github-markdown-css@4/github-markdown.min.css',
+        'https://cdn.jsdelivr.net/gh/PrismJS/prism@1/themes/prism.min.css',
+        'https://cdn.jsdelivr.net/gh/PrismJS/prism@1/plugins/toolbar/prism-toolbar.min.css'
+      ]
+    }
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/emoji-picker-element@^1/index.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vextab@3.0.6/dist/main.prod.min.js"></script>
+  <script type="module">import { Vex } from "https://cdn.skypack.dev/vexflow@beta/build/esm/entry/vexflow.js";</script>
+  <script>
+    let script = document.createElement('script');
+    script.src = "https://cdn.jsdelivr.net/npm/mathpix-markdown-it@1.0.40/es5/bundle.js";
+    document.head.append(script);
+
+    script.onload = function () {
+      const isLoaded = window.loadMathJax();
+      if (isLoaded) {
+        console.log('Styles loaded!')
+      }
+    }
+  </script>
+  <script defer src="ccold.js"></script>
+
+  <title>CΘDΣ CHΔT</title>
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [
+          ['$', '$'],
+          ['\\(', '\\)']
+        ]
+      }
+    }
+    addEventListener('zero-md-rendered', () => MathJax.typeset())
+  </script>
+</head>
+
+<body>
+  <div class="app-container">
+    <div class="app-header">
+      <div class="app-header-left">
+        <span><i class="fa fa-send-o" style="color:var(--flat-belize);font-size:6vh"></i></span>
+        <p class="app-name">C<span style="color: var(--flat-belize);">Θ</span>D<span
+            style="color: var(--flat-belize);">Σ</span><br>CH<span style="color: var(--flat-belize);">Δ</span>T</p>
+      </div>
+      <div class="app-header-right">
+        <input type="checkbox" class="mode-switch" id="toggle-check" checked>
+        <label for="toggle-check" class="toggle-label cursor-pointer">
+          <div class="toggle-container">
+            <div class="toggle-dark-icon icon">
+              <i class="fa fa-moon-o"></i>
+            </div>
+            <div class="toggle-dark-icon icon">
+              <i class="fa fa-sun-o" style="color: #fff;"></i>
+            </div>
+            <div class="toggle-circle"></div>
+          </div>
+        </label>
+        <button id="notifies" class="nav-btn">
+          <i class="fa fa-bell" style="font-size:3vh"></i>
+        </button>
+        <button id="files" class="nav-btn">
+          <i class="fa fa-folder" style="font-size:3vh"></i>
+        </button>
+        <button class="nav-btn">
+          <i class="fa fa-calendar" style="font-size:3vh"></i>
+        </button>
+        <button class="nav-btn">
+          <i class="fa fa-gear" style="font-size:3vh;"></i>
+        </button>
+      </div>
+    </div>
+    <div class="app-content">
+      <div class="projects-section">
+        
+        <nav class="nav-horizontal-scroll">
+          <ul>
+            <li><span style="color:var(--flat-belize);">uni </span><i class="fa fa-wechat" style="font-size:2vh;"></i> CHΔT 
+            </li>
+
+            <li> <span style="color:var(--flat-belize);">chat </span> <i class="fa fa-columns" style="font-size:2vh"></i> BΘΔRD </li>
+
+            <li><i class="fa fa-phone" style="font-size:2vh"></i> | <i class="fa fa-video-camera"
+                  style="font-size:2vh"></i> CΔLL </li>
+
+            <li> <span style="color:var(--flat-belize);">sticky </span> <i class="fa fa-sticky-note-o" style="font-size:2vh"></i> NΘTΣS</li>
+
+            <li> <span style="color:var(--flat-belize);">kanban </span> <i class="fa fa-columns" style="font-size:2vh"></i> BΘΔRD </li>
+
+            <li><span style="color:var(--flat-belize);">to-do </span><i class="fa fa-edit" style="font-size:2vh"></i> LIST </li>
+
+            <li> <span style="color:var(--flat-belize);">social </span> <i class="fa fa-columns" style="font-size:2vh"></i> BΘΔRD </li>
+
+            <li> <span style="color:var(--flat-belize);">Q&A </span> <i class="fa fa-question" style="font-size:2vh"></i> | <i class="fa fa-lightbulb-o"
+              style="font-size:2vh"></i> FΘRUM </li>
+
+            <li> <span style="color:var(--flat-belize);">white </span> <i class="fas fa-chalkboard-teacher" style="font-size:2vh"></i> BΘΔRD </li>
+
+          </ul>
+        </nav>
+
+         
+<div class="whiteboard" style="display: none;">
+  <div id="toolBar" class="toolbar">
+  <div id="radiusTool" class="radius__tool">
+    <span>RADIUS</span>
+    <input type="range" name="radiusPoint" id="radiusPoint" class="radius__point" min="1" max="20" step="1" value="10">
+    <span id="radTextRaduis">10</span>
+  </div>
+  <div id="radiusTool" class="radius__tool">
+    <span>BLUR</span>
+    <input type="range" name="radiusBlur" id="radiusBlur" class="radius__point" min="0" max="20" step="1" value="0">
+    <span id="radTextBlur">0</span>
+  </div>
+  <div id="selectColors" class="select__colors">
+    <input type="radio" name="radioColors" id="red" value="#FF0000">
+    <label for="red" class="radio__colors"></label>
+    <input type="radio" name="radioColors" id="blue" value="#2E8B57">
+    <label for="blue" class="radio__colors"></label>
+    <input type="radio" name="radioColors" id="green" value="#1E90FF">
+    <label for="green" class="radio__colors"></label>
+    <input type="radio" name="radioColors" id="yellow" value="#FFFF00">
+    <label for="yellow" class="radio__colors"></label>
+    <input type="radio" name="radioColors" id="pink" value="#FF69B4">
+    <label for="pink" class="radio__colors"></label>
+    <input type="radio" name="radioColors" id="gray" value="#A9A9A9">
+    <label for="gray" class="radio__colors"></label>
+    <input type="radio" name="radioColors" id="black" checked value="#111111">
+    <label for="black" class="radio__colors"></label>
+  </div>
+  <div class="buttons__canvas">
+    <button type="button" id="saveCanvas" class="btn__save">SAVE</button>
+    <button type="button" id="clearCanvas" class="btn__clear">CLEAR</button>
+  </div>
+</div>
+<canvas id="canvas">
+  Sorry, your browser is rubbish.
+</canvas></div>
+
+        <!--new start-->
+        <div class="to-do-list" style="display: none;">
+          <div
+            class="container d-flex justify-content-center align-items-center p-5"
+          >
+            <div
+              class="to-do-list-body position-relative d-flex flex-column bg-white rounded-5"
+            >
+              <div class="to-do-list-tasks p-5">
+                <div class="title text-center">
+                  <h1 class="fw-bold">To-do list</h1>
+                  <p id="tasksInfo" class="fw-bold"></p>
+                </div>
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Num</th>
+                      <th class="w-50">Task</th>
+                      <th>Date</th>
+                      <th>Status</th>
+                      <th>Delete</th>
+                    </tr>
+                  </thead>
+                  <tbody id="tasksBody"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--new end-->
+    
+        <div  id="unichat" style="display: block;"> 
+        </div>
+        <zero-md class="bubble" id="md-edit" no-shadow manual-render></zero-md>
+        <div class="chat__form" style="display: block;">
+          <form id="chat__form">
+            <button id="emoji-button" type="button"> 😋</button>
+            <textarea id="text-message" type="text" placeholder=" >_"></textarea>
+            <emoji-picker class="dark"></emoji-picker>
+            <button id="vn-button" type="button"><i class="fa fa-microphone" style="font-size:2.5vh"></i></button>
+            <button id="vn-button" type="button"><i class="fa fa-video-camera" style="font-size:2.5vh"></i></button>
+            <button id="send" type="submit"><i class="fa fa-send-o"
+                style="font-size:2.5vh; color: var(--flat-belize);"></i></button>
+          </form>
+        </div>
+      </div>
+      <div class="active-streams-section">
+
+        <div class="window-content-view" style="display: none;">
+
+          <div class="sidebar-folder-list">
+            <div class="folder-list-item" id="docs">
+              <i class="fa fa-mortar-board"></i>
+              <p>Education</p>
+            </div>
+            <div class="folder-list-item" id="projects">
+              <i class="fa fa-suitcase"></i>
+              <p>Occupation</p>
+            </div>
+            <div class="folder-list-item" id="samples">
+              <i class="fa fa-user-circle-o"></i>
+              <p>Personal</p>
+            </div>
+            <div class="folder-list-item" id="about-me">
+              <i class="fa fa-vcard-o"></i>
+              <p>Networking</p>
+            </div>
+          </div>
+
+          <div class="main-content-view" id="docs-content">
+
+
+            <div class="content-item">
+              <div class="content-icon">
+                <i class="fa fa-folder fa-3x"></i>
+              </div>
+              <div class="content-description">
+                Ethics
+              </div>
+            </div>
+
+            <div class="content-item">
+              <div class="content-icon">
+                <i class="fa fa-folder fa-3x"></i>
+              </div>
+              <div class="content-description">
+                Industrial Project
+              </div>
+            </div>
+
+            <div class="content-item">
+              <div class="content-icon">
+                <i class="fa fa-folder fa-3x"></i>
+              </div>
+              <div class="content-description">
+                Electronic Coms
+              </div>
+            </div>
+
+            <div class="content-item">
+              <div class="content-icon">
+                <i class="fa fa-folder fa-3x"></i>
+              </div>
+              <div class="content-description">
+                Math 4
+              </div>
+            </div>
+
+            <div class="content-item">
+              <div class="content-icon">
+                <i class="fa fa-folder fa-3x"></i>
+              </div>
+              <div class="content-description">
+                Embedded Systems
+              </div>
+            </div>
+
+            <div class="content-item">
+              <div class="content-icon">
+                <i class="fa fa-folder fa-3x"></i>
+              </div>
+              <div class="content-description">
+                Project6
+              </div>
+            </div>
+
+          </div>
+
+          <div class="main-content-view" id="projects-content" style="display:none;">
+
+            <div class="content-item">
+              <div class="content-icon">
+                <i class="fa fa-file-pdf-o fa-3x"></i>
+              </div>
+              <div class="content-description">
+                resume.pdf
+              </div>
+            </div>
+
+            <div class="content-item">
+              <div class="content-icon">
+                <i class="fa fa-file-word-o fa-3x"></i>
+              </div>
+              <div class="content-description">
+                resume.docx
+              </div>
+            </div>
+
+          </div>
+
+          <div class="main-content-view" id="samples-content" style="display:none;">
+
+            <div class="content-item">
+              <div class="content-icon">
+                <i class="fa fa-file-code-o fa-3x"></i>
+              </div>
+              <div class="content-description">
+                sample_1.cpp
+              </div>
+            </div>
+
+            <div class="content-item">
+              <div class="content-icon">
+                <i class="fa fa-file-code-o fa-3x"></i>
+              </div>
+              <div class="content-description">
+                sample_1.py
+              </div>
+            </div>
+
+            <div class="content-item">
+              <div class="content-icon">
+                <i class="fa fa-file-code-o fa-3x"></i>
+              </div>
+              <div class="content-description">
+                sample_1.swift
+              </div>
+            </div>
+
+            <div class="content-item">
+              <div class="content-icon">
+                <i class="fa fa-file-code-o fa-3x"></i>
+              </div>
+              <div class="content-description">
+                sample_1.rb
+              </div>
+            </div>
+            <div class="content-item">
+              <div class="content-icon">
+                <i class="fa fa-file-code-o fa-3x"></i>
+              </div>
+              <div class="content-description">
+                sample_2.cpp
+              </div>
+            </div>
+
+            <div class="content-item">
+              <div class="content-icon">
+                <i class="fa fa-file-code-o fa-3x"></i>
+              </div>
+              <div class="content-description">
+                sample_2.py
+              </div>
+            </div>
+
+            <div class="content-item">
+              <div class="content-icon">
+                <i class="fa fa-file-code-o fa-3x"></i>
+              </div>
+              <div class="content-description">
+                sample_2.swift
+              </div>
+            </div>
+
+            <div class="content-item">
+              <div class="content-icon">
+                <i class="fa fa-file-code-o fa-3x"></i>
+              </div>
+              <div class="content-description">
+                sample_2.rb
+              </div>
+            </div>
+
+            <div class="content-item">
+              <div class="content-icon">
+                <i class="fa fa-file-code-o fa-3x"></i>
+              </div>
+              <div class="content-description">
+                sample_3.cpp
+              </div>
+            </div>
+
+            <div class="content-item">
+              <div class="content-icon">
+                <i class="fa fa-file-code-o fa-3x"></i>
+              </div>
+              <div class="content-description">
+                sample_3.py
+              </div>
+            </div>
+
+            <div class="content-item">
+              <div class="content-icon">
+                <i class="fa fa-file-code-o fa-3x"></i>
+              </div>
+              <div class="content-description">
+                sample_3.swift
+              </div>
+            </div>
+
+            <div class="content-item">
+              <div class="content-icon">
+                <i class="fa fa-file-code-o fa-3x"></i>
+              </div>
+              <div class="content-description">
+                sample_3.rb
+              </div>
+            </div>
+          </div>
+
+          <div class="main-content-view" id="about-content" style="display:none;">
+
+            <div class="content-item">
+              <div class="content-icon">
+                <i class="fa fa-address-card-o fa-3x"></i>
+              </div>
+              <div class="content-description">
+                Contact
+              </div>
+            </div>
+
+            <div class="content-item">
+              <div class="content-icon">
+                <i class="fa fa-github fa-3x"></i>
+              </div>
+              <div class="content-description">
+                Github
+              </div>
+            </div>
+
+            <div class="content-item">
+              <div class="content-icon">
+                <i class="fa fa-bitbucket fa-3x"></i>
+              </div>
+              <div class="content-description">
+                Bitbucket
+              </div>
+            </div>
+
+            <div class="content-item">
+              <div class="content-icon">
+                <i class="fa fa-linkedin-square fa-3x"></i>
+              </div>
+              <div class="content-description">
+                LinkedIn
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="pa_notifications">
+          <svg display="none">
+            <symbol id="clock" viewBox="0 0 32 32">
+              <circle r="15" cx="16" cy="16" fill="none" stroke="currentColor" stroke-width="2" />
+              <polyline points="16,7 16,16 23,16" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </symbol>
+            <symbol id="error" viewBox="0 0 32 32">
+              <circle r="15" cx="16" cy="16" fill="none" stroke="hsl(13,90%,55%)" stroke-width="2" />
+              <line x1="10" y1="10" x2="22" y2="22" stroke="hsl(13,90%,55%)" stroke-width="2" stroke-linecap="round" />
+              <line x1="22" y1="10" x2="10" y2="22" stroke="hsl(13,90%,55%)" stroke-width="2" stroke-linecap="round" />
+            </symbol>
+            <symbol id="message" viewBox="0 0 32 32">
+              <polygon points="1,6 31,6 31,26 1,26" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" />
+              <polyline points="1,6 16,18 31,6" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </symbol>
+            <symbol id="success" viewBox="0 0 32 32">
+              <circle r="15" cx="16" cy="16" fill="none" stroke="hsl(93,90%,40%)" stroke-width="2" />
+              <polyline points="9,18 13,22 23,12" fill="none" stroke="hsl(93,90%,40%)" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </symbol>
+            <symbol id="up" viewBox="0 0 32 32">
+              <circle r="15" cx="16" cy="16" fill="none" stroke="currentColor" stroke-width="2" />
+              <polyline points="11,15 16,10 21,15" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" />
+              <line x1="16" y1="10" x2="16" y2="22" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            </symbol>
+            <symbol id="warning" viewBox="0 0 32 32">
+              <polygon points="16,1 31,31 1,31" fill="none" stroke="hsl(33,90%,55%)" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" />
+              <line x1="16" y1="12" x2="16" y2="20" stroke="hsl(33,90%,55%)" stroke-width="2" stroke-linecap="round" />
+              <line x1="16" y1="25" x2="16" y2="25" stroke="hsl(33,90%,55%)" stroke-width="3" stroke-linecap="round" />
+            </symbol>
+            <symbol id="missed-call" viewBox="-5 -5 32 32">
+              <g stroke="none" stroke-width="50" fill="none" fill-rule="evenodd">
+                <circle r="15" cx="11" cy="11" fill="none" stroke="hsl(13,90%,55%)" stroke-width="2" />
+                <path d="M6.58578644,8 L5.17157288,6.58578644 C4.78104858,6.19526215 4.78104858,5.56209717 5.17157288,5.17157288 C5.56209717,4.78104858 6.19526215,4.78104858 6.58578644,5.17157288 L8,6.58578644 L9.41421356,5.17157288 C9.80473785,4.78104858 10.4379028,4.78104858 10.8284271,5.17157288 C11.2189514,5.56209717 11.2189514,6.19526215 10.8284271,6.58578644 L9.41421356,8 L10.8284271,9.41421356 C11.2189514,9.80473785 11.2189514,10.4379028 10.8284271,10.8284271 C10.4379028,11.2189514 9.80473785,11.2189514 9.41421356,10.8284271 L8,9.41421356 L6.58578644,10.8284271 C6.19526215,11.2189514 5.56209717,11.2189514 5.17157288,10.8284271 C4.78104858,10.4379028 4.78104858,9.80473785 5.17157288,9.41421356 L6.58578644,8 Z" fill="#EE0000" opacity="0.7"/>
+                <path d="M13.0799676,14.7839934 L15.2839934,12.5799676 C15.8927139,11.9712471 16.0436229,11.0413042 15.6586342,10.2713269 L15.5337539,10.0215663 C15.1487653,9.25158901 15.2996742,8.3216461 15.9083948,7.71292558 L18.6411989,4.98012149 C18.836461,4.78485934 19.1530435,4.78485934 19.3483056,4.98012149 C19.3863063,5.01812215 19.4179321,5.06200062 19.4419658,5.11006808 L20.5459415,7.31801948 C21.3904962,9.0071287 21.0594452,11.0471565 19.7240871,12.3825146 L13.7252616,18.3813401 C12.2717221,19.8348796 10.1217008,20.3424308 8.17157288,19.6923882 L5.75709327,18.8875616 C5.49512161,18.8002377 5.35354162,18.5170777 5.4408655,18.2551061 C5.46541191,18.1814669 5.50676633,18.114554 5.56165376,18.0596666 L8.21292558,15.4083948 C8.8216461,14.7996742 9.75158901,14.6487653 10.5215663,15.0337539 L10.7713269,15.1586342 C11.5413042,15.5436229 12.4712471,15.3927139 13.0799676,14.7839934 Z" fill="#000000"/>
+            </g>
+            </symbol>
+            <symbol id="vid-content" viewBox="0 0 22 22">
+              <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <polygon points="0 0 24 0 24 24 0 24"/>
+                <path d="M5.85714286,2 L13.7364114,2 C14.0910962,2 14.4343066,2.12568431 14.7051108,2.35473959 L19.4686994,6.3839416 C19.8056532,6.66894833 20,7.08787823 20,7.52920201 L20,20.0833333 C20,21.8738751 19.9795521,22 18.1428571,22 L5.85714286,22 C4.02044787,22 4,21.8738751 4,20.0833333 L4,3.91666667 C4,2.12612489 4.02044787,2 5.85714286,2 Z" fill="#000000" fill-rule="nonzero" opacity="0.3"/>
+                <path d="M10.782158,15.8052934 L15.1856088,12.7952868 C15.4135806,12.6394552 15.4720618,12.3283211 15.3162302,12.1003494 C15.2814587,12.0494808 15.2375842,12.0054775 15.1868178,11.970557 L10.783367,8.94156929 C10.5558531,8.78507001 10.2445489,8.84263875 10.0880496,9.07015268 C10.0307022,9.15352258 10,9.25233045 10,9.35351969 L10,15.392514 C10,15.6686564 10.2238576,15.892514 10.5,15.892514 C10.6006894,15.892514 10.699033,15.8621141 10.782158,15.8052934 Z" fill="#000000"/>
+            </g>
+            </symbol>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</body>
+
+</html>
